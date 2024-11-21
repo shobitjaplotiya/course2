@@ -115,5 +115,6 @@ def delete_course(course_id):
 
 # Start the Flask app
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=8080)
+    port = int(os.environ.get("PORT", 8000))  # Use PORT env variable or default to 8000
+    app.run(host="0.0.0.0", port=port)
 
